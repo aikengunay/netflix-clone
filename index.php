@@ -1,5 +1,7 @@
 <?php
 require_once("includes/config.php");
+require_once("includes/classes/PreviewProvider.php");
+require_once("includes/classes/Entity.php");
 
 /**
  * Check if user is logged in by looking for session variable
@@ -11,4 +13,9 @@ if (!isset($_SESSION["userLoggedIn"])) {
     // - This prevents unauthorized access to this page
     header("Location: login.php");
 }
+
+$userLoggedIn = $_SESSION["userLoggedIn"];
+$preview = new PreviewProvider($con, $userLoggedIn);
+echo $preview->createPreviewVideo(null);
+
 ?>
