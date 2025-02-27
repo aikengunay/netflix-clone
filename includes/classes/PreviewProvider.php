@@ -38,9 +38,12 @@ class PreviewProvider {
         $preview = $entity->getPreview(); // Preview video URL
         $thumbnail = $entity->getThumbnail(); // Thumbnail image URL
         
-        // Output the thumbnail image using HTML
-        // This will display the movie/show thumbnail on the webpage
-        echo "<img src='$thumbnail'>";
+        return "<div class='previewContainer'>
+            <img src='$thumbnail' class='previewImage' hidden>
+            <video autoplay muted class='previewVideo'>
+                <source src='$preview' type='video/mp4'>
+            </video>
+        </div>";
     }
 
     /**
