@@ -38,6 +38,8 @@ class PreviewProvider {
         $preview = $entity->getPreview(); // Preview video URL
         $thumbnail = $entity->getThumbnail(); // Thumbnail image URL
         
+        // TODO: ADD SUBTITLE
+
         return "<div class='previewContainer'>
             <img src='$thumbnail' class='previewImage' hidden>
             <video autoplay muted class='previewVideo'>
@@ -46,6 +48,15 @@ class PreviewProvider {
             <div class='previewOverlay'>
                 <div class='mainDetails'>
                     <h3>$name</h3>
+                    <div class='buttons'>
+                        <button>
+                        <i class='fa-solid fa-play'></i>
+                         Play
+                        </button>
+                        <button>
+                        <i class='fa-solid fa-volume-xmark'></i>
+                        </button>
+                    </div>
                 </div>
             </div> 
         </div>";
