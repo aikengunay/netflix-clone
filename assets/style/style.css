@@ -146,3 +146,9 @@ button i {
   background-color: #e6e6e6;
   color: #000;
 }
+
+.wrapper {
+  min-width: 1050px;
+  min-height: 100%;
+  background-color: #141414;
+}
