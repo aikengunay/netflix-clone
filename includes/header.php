@@ -11,7 +11,7 @@ if (!isset($_SESSION["userLoggedIn"])) {
     // If user is not logged in:
     // - Redirect them to the login page
     // - This prevents unauthorized access to this page
-    header("Location: login.php");
+    header("Location: register.php");
 }
 ?>
 <!DOCTYPE html>
@@ -22,6 +22,7 @@ if (!isset($_SESSION["userLoggedIn"])) {
     <link rel="stylesheet" type="text/css" href="assets/style/style.css">
     <title>Welcome to Reeceflix</title>
 </head>
-<body>
-    <div class="wrapper">
-        
+    <body>
+        <div class="wrapper"></div>
+    </body>
+</html>
